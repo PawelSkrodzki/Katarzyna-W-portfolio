@@ -1,0 +1,278 @@
+@font-face {
+  src: url(fonts/made_bon_voyage_regular-webfont.woff);
+  font-family: BonVoyage regular;
+}
+
+@font-face {
+  src: url(fonts/made_bon_voyage_thin-webfont.woff);
+  font-family: BonVoyage light;
+}
+
+@font-face {
+  src: url(fonts/ProximaNova-Light.otf);
+  font-family: ProximaNova;
+}
+
+body{
+  overflow-x: hidden;
+}
+
+.main-nav {
+  padding-top: 76px;
+  margin: 0 0 0 auto;
+  max-width: 570px;
+  white-space: nowrap;
+}
+
+.main-nav ul>li {
+  display: inline-block;
+  padding-left: 36px;
+  opacity: 0;
+}
+
+.main-nav ul>li a {
+  font-family: ProximaNova;
+  font-size: 17px;
+  text-decoration: none;
+}
+
+.responsive-nav{
+  display: none;
+}
+
+.hamburger{
+  box-sizing: content-box;
+  position: absolute;
+  right: -10px;
+  top: 50px;
+  width: 30px;
+  height: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  display: flex;
+  padding: 10px;
+  z-index: 200;
+}
+
+.hamburger.subpage-hamburger{
+  right: 10px;
+}
+
+.hamburger-fixed{
+  position: fixed;
+  right: 10px;
+}
+
+.hamburger span{
+  width: 30px;
+  height: 2px;
+  background-color: black;
+  transition: 0.5s;
+}
+
+.bar1-opened{
+  transform: rotateZ(-45deg) translate(-6px, 10px);
+  transition: 0.5s;
+}
+
+.bar2-opened{
+  transform: rotateZ(45deg) translate(5px, 0px);
+  transition: 0.5s;
+}
+
+.responsive-menu {
+  z-index: 100;
+  position: fixed;
+  right: -170px;
+  top: 0px;
+  width: 170px;
+  height: 100vh;
+  padding-top: 99px;
+  background-color: #fffdf4;
+  border-left: 1px solid #000000;
+  transition: 0.5s;
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.responsive-menu-open{
+  right: 0;
+  transition: 0.5s;
+}
+
+.responsive-menu li{
+  margin-top: 10px;
+  padding: 20px;
+  font-size: 20px;
+}
+
+.name {
+  font-size: 27px;
+  position: absolute;
+  top: 50px;
+  max-width: 203px;
+  opacity: 0;
+}
+
+.name a{
+  font-family: BonVoyage light;
+}
+
+.title-overlay{
+  overflow-y: hidden;
+  max-width: 1067px;
+  min-height: 240px;
+  margin: 168px 0 170px 0;
+}
+
+.title-overflow{
+  display: inline-block;
+  overflow: hidden;
+}
+
+.title-content{
+  display: inline-block;
+  transform: translateY(100%);
+}
+
+.main-title-static {
+  font-family: BonVoyage light;
+  font-weight: normal;
+  font-size: 182px;
+  line-height: 220px;
+  transform: translateY(100%);
+}
+
+.main-title-double {
+  font-family: BonVoyage light;
+  margin: 168px 0 170px 0;
+  font-weight: normal;
+  font-size: 182px;
+  line-height: 170px;
+}
+
+
+footer{
+  margin-top: 291px;
+  margin-bottom: 20px;
+}
+
+footer a{
+  font-family: BonVoyage regular;
+}
+
+.next-chapter {
+  font-size: 20px;
+  text-align: center;
+  display: block;
+}
+
+.next-chapter-title {
+  font-weight: 300;
+  text-align: center;
+  margin-top: 54px;
+}
+
+.next-chapter-title a{
+  font-family: BonVoyage light;
+}
+
+.contact {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 253px;
+
+}
+
+.contact-photo-container {
+  display: flex;
+  width: 100px;
+  justify-content: space-around;
+}
+
+.footer p {
+  font-family: ProximaNova;
+  flex: 1;
+  font-size: 16px;
+}
+
+.contact p:last-child {
+  text-align: right;
+}
+
+@media (max-width: 951px){
+
+  .main-nav {
+    padding-top: 76px;
+    margin: 0 0 0 auto;
+    max-width: 500px;
+  }
+  .main-nav ul>li {
+    display: inline-block;
+    padding-left: 25px;
+    opacity: 0;
+  }
+
+  .title-overlay {
+    margin: 0 0 100px 0;
+    padding-top: 200px;
+    min-height: auto;
+}
+
+  .main-title-static{
+    font-size: 18vw;
+    line-height: 26vw;
+  }
+
+  .main-title-double{
+    margin: 0 0 100px 0;
+    padding-top: 200px;
+    line-height: 18vw;
+    font-size: 18vw;
+  }
+
+}
+
+@media (max-width: 768px) {
+
+  .main-nav{
+    display: none;
+  }
+
+  .responsive-nav {
+    display: block;
+    transition: opacity 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+  }
+
+  .main-title-static{
+    font-size: 18vw;
+    line-height: 26vw;
+  }
+
+  footer {
+    margin-top: 205px;
+  }
+
+  .contact {
+    flex-direction: column;
+  }
+
+  .next-chapter-title{
+    font-size: 59px;
+  }
+
+  .footer p:last-of-type {
+    margin: 6px 0 20px 0;
+  }
+
+  .contact-photo-container {
+    width: 140px;
+    order: -1;
+    margin-bottom: 25px;
+  }
+
+}

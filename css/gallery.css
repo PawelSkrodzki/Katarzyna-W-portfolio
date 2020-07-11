@@ -1,0 +1,123 @@
+@font-face {
+    src: url(fonts/made_bon_voyage_regular-webfont.woff);
+    font-family: BonVoyage regular;
+}
+
+@font-face {
+    src: url(fonts/made_bon_voyage_thin-webfont.woff);
+    font-family: BonVoyage light;
+}
+
+@font-face {
+    src: url(fonts/ProximaNova-Light.otf);
+    font-family: ProximaNova;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+p {
+    font-family: BonVoyage regular;
+    font-size: 27px;
+    line-height: 36px;
+}
+
+h2 {
+    font-size: 122px;
+    line-height: 105.9%;
+}
+
+a {
+    text-decoration: none;
+    color: #0C0C0C;
+}
+
+body {
+    background-color: #EAE1DE;
+    color: #0C0C0C;
+}
+
+.main-container {
+    max-width: 1640px;
+    position: relative;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+}
+
+.photo-container {
+    margin-bottom: 62px;
+    flex: 1;
+    margin-left: 0;
+    margin-right: auto;
+}
+
+.photo-container:nth-child(1) img,
+.photo-container:nth-child(2) img,
+.photo-container:nth-child(4) img,
+.photo-container:nth-child(5) img,
+.photo-container:nth-child(8) img,
+.photo-container:nth-child(1),
+.photo-container:nth-child(2),
+.photo-container:nth-child(4),
+.photo-container:nth-child(5),
+.photo-container:nth-child(8) {
+    width: 65vw;
+    max-width: 678px;
+}
+
+.photo-container:nth-child(3) img,
+.photo-container:nth-child(6) img,
+.photo-container:nth-child(7) img,
+.photo-container:nth-child(3),
+.photo-container:nth-child(6),
+.photo-container:nth-child(7) {
+    width: 37vw;
+    max-width: 449px;
+}
+
+.right {
+    margin-left: auto;
+    margin-right: 0;
+}
+
+
+@media (max-width: 768px) {
+    .main-container {
+        padding: 0 20px;
+    }
+
+    p {
+        font-size: 20px;
+        line-height: 147.55%;
+    }
+
+    .photo-container:nth-child(1) img,
+    .photo-container:nth-child(2) img,
+    .photo-container:nth-child(4) img,
+    .photo-container:nth-child(5) img,
+    .photo-container:nth-child(8) img,
+    .photo-container:nth-child(1),
+    .photo-container:nth-child(2),
+    .photo-container:nth-child(4),
+    .photo-container:nth-child(5),
+    .photo-container:nth-child(8) {
+        width: 75vw;
+    }
+
+    .photo-container:nth-child(3) img,
+    .photo-container:nth-child(6) img,
+    .photo-container:nth-child(7) img,
+    .photo-container:nth-child(3),
+    .photo-container:nth-child(6),
+    .photo-container:nth-child(7) {
+        width: 47vw;
+    }
+}

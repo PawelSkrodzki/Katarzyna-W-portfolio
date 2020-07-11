@@ -1,0 +1,122 @@
+@font-face {
+    src: url(fonts/made_bon_voyage_regular-webfont.woff);
+    font-family: BonVoyage regular;
+}
+
+@font-face {
+    src: url(fonts/made_bon_voyage_thin-webfont.woff);
+    font-family: BonVoyage light;
+}
+
+@font-face {
+    src: url(fonts/ProximaNova-Light.otf);
+    font-family: ProximaNova;
+}
+
+@keyframes fullLine {
+    0% {
+        width: 0%;
+    }
+
+    100% {
+        width: 100%;
+    }
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+p {
+    font-size: 27px;
+    line-height: 36px;
+}
+
+h2 {
+    font-size: 122px;
+    line-height: 105.9%;
+}
+
+a {
+    text-decoration: none;
+    color: #0C0C0C;
+}
+
+body {
+    background-color: #f3f3f3;
+    color: #0C0C0C;
+}
+
+.main-container {
+    max-width: 1640px;
+    position: relative;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+.next-concert-container {
+    position: relative;
+    align-items: center;
+    display: flex;
+    padding: 34px 0;
+}
+
+.line {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    background-color: #000000;
+    height: 1px;
+}
+
+.line:first-child {
+    top: 0;
+}
+
+
+
+.text-container {
+    margin-left: 3%;
+    width: 100%;
+}
+
+.date {
+    font-size: 20px;
+    font-family: BonVoyage regular;
+    color: #8F8F8F;
+    letter-spacing: 2px;
+}
+
+.place {
+    font-size: 34px;
+    font-family: BonVoyage regular;
+}
+
+.arrow {
+    margin-left: 5px;
+}
+
+
+@media (max-width: 991px) {
+    .next-concert-container img {
+        width: 33vw;
+        min-width: 100px;
+    }
+}
+
+@media (max-width: 768px) {
+    .main-container {
+        padding: 0 20px;
+    }
+
+    .date {
+        font-size: 16px;
+    }
+
+    .place {
+        font-size: 26px;
+    }
+}

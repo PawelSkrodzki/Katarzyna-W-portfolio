@@ -1,0 +1,146 @@
+@font-face {
+    src: url(fonts/made_bon_voyage_regular-webfont.woff);
+    font-family: BonVoyage regular;
+  }
+  
+  @font-face {
+    src: url(fonts/made_bon_voyage_thin-webfont.woff);
+    font-family: BonVoyage light;
+  }
+  
+  @font-face {
+    src: url(fonts/ProximaNova-Light.otf);
+    font-family: ProximaNova;
+  }
+
+  @keyframes fullLine {
+    0% {
+      width: 0%;
+    }
+    100% {
+      width: 100%;
+    }
+  }
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+p {
+    font-family: ProximaNova;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 36px;
+  }
+  
+  h1{
+    font-family: BonVoyage light;
+    font-weight: 300;
+  }
+  
+  h2 {
+    font-family: BonVoyage light;
+    font-weight: 300;
+    font-size: 122px;
+    line-height: 105.9%;
+  }
+  
+  a {
+    font-family: BonVoyage regular;
+    text-decoration: none;
+    color: #0C0C0C;
+  }
+
+body {
+    background-color: #ECECEC;
+    color: #0C0C0C;
+}
+
+.main-container {
+    position: relative;
+    max-width: 1640px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 1.8fr 1fr;
+    grid-column-gap: 50px;
+}
+
+.main-text-container p {
+    margin-bottom: 96px;
+}
+
+.p-bold-framed {
+    position: relative;
+    font-family: BonVoyage regular;
+    font-size: 25px;
+    padding: 30px 70px 30px 0;
+}
+
+.line{
+    position: absolute;
+    left: 0;
+    width: 0;
+    background-color: black;
+    height: 1px;
+}
+
+.line:first-child{
+    top:0
+}
+
+.line:last-child{
+    bottom: 0;
+}
+
+.main-text-container img {
+    width: 100%;
+}
+
+.side-text-container {
+    justify-self: right;
+}
+
+.side-text-container h4 {
+    font-family: BonVoyage light;
+    color: #8F8F8F;
+    font-size: 18px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 39px;
+}
+
+.side-text-container p {
+    font-size: 20px;
+    max-width: 250px;
+    margin-bottom: 49px;
+}
+
+.side-text-container img {
+    max-width: 268.73px;
+    margin-top: 157px;
+}
+
+@media (max-width: 768px) {
+    .main-container {
+        padding: 0 20px;
+    }
+
+    main {
+        grid-template-columns: 1fr;
+    }
+
+    .side-text-container {
+        justify-self: center;
+        text-align: center;
+    }
+
+    .side-text-container img {
+        margin-top: 100px;
+    }
+}

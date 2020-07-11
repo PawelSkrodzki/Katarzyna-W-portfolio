@@ -1,0 +1,359 @@
+@font-face {
+  src: url(fonts/made_bon_voyage_regular-webfont.woff);
+  font-family: BonVoyage regular;
+}
+
+
+@font-face {
+  font-family: BonVoyage light;
+  src: url('made_bon_voyage_thin-webfont.woff2') format('woff2'),
+       url('made_bon_voyage_thin-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  src: url(fonts/ProximaNova-Light.otf);
+  font-family: ProximaNova;
+}
+
+@keyframes fadein {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+p {
+  font-family: BonVoyage regular;
+  font-size: 27px;
+  line-height: 36px;
+}
+
+h1{
+  font-family: BonVoyage light;
+  font-weight: 300;
+}
+
+h2 {
+  font-family: BonVoyage light;
+  font-weight: 300;
+  font-size: 122px;
+  line-height: 105.9%;
+}
+
+a {
+  font-family: BonVoyage regular;
+  text-decoration: none;
+  color: #0C0C0C;
+}
+
+body {
+  background-color: #c7d3c9;
+  color: #0C0C0C;
+}
+
+input
+{
+	border:0;
+	background:none;
+  pointer-events: none;
+	font-size:13px;
+	font-family:Arial;
+}
+
+.loader{
+  position: relative;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #212121;
+  z-index: 1000;
+}
+
+.loader-content{
+  height: 180px;
+  position: absolute;
+  bottom: 50px;
+  left: 100px;
+  overflow: hidden;
+}
+
+.dot,
+.counter{
+  z-index: 1100;
+  font-size: 182px;
+  color: #FFFFFF;
+  font-family: BonVoyage light;
+  transform: translateY(100%);
+}
+
+.counter{
+  text-align: right;
+  width: 300px;
+  height: 180px;
+  line-height: 170px;
+}
+
+.dot{
+  display: inline-block;
+}
+
+.main-container {
+  font-family: BonVoyage regular;
+  max-width: 1640px;
+  position: relative;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+header {
+  position: relative;
+  height: 100vh;
+  min-height: 1000px;
+  max-height: 2000px;
+}
+
+
+.main-title {
+  position: absolute;
+  top: 300px;
+  left: 0;
+  font-weight: normal;
+  font-size: 182px;
+  line-height: 190px;
+}
+
+.title-overflow{
+  display: inline-block;
+  overflow: hidden;
+}
+
+.title-content{
+  display: inline-block;
+  transform: translateY(100%);
+}
+
+.main-title-small {
+  top: 0;
+  /* font-family: BonVoyage regular; */
+  font-size: 27px;
+  line-height: 29px;
+  transition: top 1s;
+}
+
+.overlay {
+  position: absolute;
+  transform: translateX(-50%);
+  left: 50%;
+  bottom: -100%;
+  width: 315px;
+  height: 409px;
+  /*zmiana przy animacji*/
+}
+
+.overlay img {
+  width: 100%;
+}
+
+.overlay h2 {
+  font-family: BonVoyage light;
+  font-weight: 300;
+  position: absolute;
+  color: #ffffff;
+  bottom: -126px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+main {
+  padding-top: 236px;
+}
+
+.motto1,
+.motto2 {
+  width: 65vw;
+  max-width: 760px;
+  min-width: 280px;
+}
+
+
+
+.motto2 {
+  margin: 166px 0 0 auto;
+}
+
+.motto-text {
+  max-width: 760px;
+  margin-right: 40px;
+}
+
+.motto1 p,
+.motto2 p{
+  overflow: hidden;
+}
+
+.motto1 span,
+.motto2 span{
+  display: block;
+  transform: translateY(100%);
+}
+
+.motto1 a,
+.motto2 a {
+  display: block;
+  min-width: 260px;
+  color: #748a77;
+  font-size: 18px;
+  line-height: 27px;
+  margin-top: 30px;
+  text-align: right;
+  text-transform: uppercase;
+}
+
+.best-of-header {
+  max-width: 848px;
+  margin-top: 169px;
+}
+
+.songs-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.song {
+  flex: 47%;
+  margin-top: 88px;
+}
+
+.song:nth-child(2n + 1) {
+  padding-right: 50px;
+}
+
+.song p {
+  font-size: 18px;
+  color: #748A77;
+  text-transform: uppercase;
+}
+
+.song a {
+  font-family: BonVoyage regular;
+  font-size: 27px;
+  line-height: 36px;
+  color: #0F0F0F;
+  margin-top: 20px;
+}
+
+.opera-image {
+  margin-top: 224px;
+  width: 100%;
+}
+
+@media (max-width: 1200px) {
+  .main-title {
+    font-size: 120px;
+    line-height: 120px;
+  }
+
+  .best-of-header {
+    font-size: 102px;
+    line-height: 100.9%;
+    max-width: 640px;
+  }
+}
+
+@media (max-width: 768px) {
+
+  p {
+    font-size: 25px;
+    line-height: 125.86%;
+  }
+
+  h2 {
+    font-family: Thryomanes;
+    font-size: 64px;
+    line-height: 69px;
+  }
+
+  .main-container {
+    padding: 0 20px;
+  }
+
+  header {
+    min-height: 0;
+  }
+
+  .main-title {
+    font-size: 15vw;
+    line-height: 13vw;
+  }
+
+  main {
+    padding-top: 140px;
+  }
+
+  .overlay {
+    bottom: -269px;
+    width: 207px;
+    height: 269px;
+  }
+
+  .overlay h2 {
+    bottom: -20px;
+  }
+
+  .motto2 {
+    margin: 112px 0 0 auto;
+  }
+
+  .motto1 p,
+  .motto2 p {
+    margin-right: 10px;
+  }
+
+  .motto1 a,
+  .motto2 a {
+    min-width: 0;
+  }
+
+  .best-of-header {
+    margin-top: 130px;
+    font-size: 64px;
+    max-width: 440px;
+  }
+
+  .songs-list {
+    flex-direction: column;
+  }
+
+  .song {
+    flex: 100%;
+  }
+
+  .song:nth-child(2n + 1) {
+    padding-right: 0;
+  }
+
+  .song a {
+    font-size: 24px;
+  }
+
+  .opera-image {
+    margin-top: 135px;
+  }
+
+  .next-chapter {
+    margin-top: 205px;
+  }
+
+}
