@@ -77,6 +77,10 @@ main {
     overflow: hidden;
 }
 
+.media li p{
+    line-height: 28px;
+}
+
 .media li a {
     font-size: 20px;
 }
@@ -88,6 +92,12 @@ main {
 .media-text {
     font-family: BonVoyage regular;
     font-size: 20px;
+}
+
+/* FOOTER OVERWRITE */
+
+.contact-photo-container{
+    width: 60px;
 }
 
 @media (max-width: 768px) {
