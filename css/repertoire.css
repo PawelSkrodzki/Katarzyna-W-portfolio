@@ -57,8 +57,19 @@ body {
     max-width: 1640px;
     position: relative;
     margin: 0 auto;
-    padding: 0 40px;
+    padding: 0 70px;
 }
+
+/* Animation styles */
+
+.animated-text,
+.line,
+.plus,
+.main-li {
+    visibility: hidden;
+}
+
+/* end */
 
 ul {
     position: relative;
@@ -101,17 +112,17 @@ li {
     ;
 }
 
-.main-li span {
+.plus {
+    opacity: 0;
     position: absolute;
     right: 20px;
     top: 35px;
-    transform: rotate(45deg);
     pointer-events: none;
     transition: 0.5s;
 }
 
-.main-li span.close-style {
-    transform: rotate(90deg);
+.main-li .plus.close-style {
+    transform: rotate(45deg);
     transition: 0.5s;
 }
 
@@ -154,7 +165,7 @@ li {
     background-color: #FFFFFF;
 }
 
-.responsive-menu{
+.responsive-menu {
     background-color: #161616;
 }
 

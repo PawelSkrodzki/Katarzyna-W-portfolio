@@ -6,8 +6,8 @@
 
 @font-face {
   font-family: BonVoyage light;
-  src: url('made_bon_voyage_thin-webfont.woff2') format('woff2'),
-       url('made_bon_voyage_thin-webfont.woff') format('woff');
+  src: url('fonts/made_bon_voyage_thin-webfont.woff2') format('woff2'),
+    url('fonts/made_bon_voyage_thin-webfont.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 }
@@ -21,10 +21,12 @@
   0% {
     opacity: 0;
   }
+
   100% {
     opacity: 1;
   }
 }
+
 
 * {
   margin: 0;
@@ -34,11 +36,11 @@
 
 p {
   font-family: BonVoyage regular;
-  font-size: 27px;
+  font-size: 25px;
   line-height: 36px;
 }
 
-h1{
+h1 {
   font-family: BonVoyage light;
   font-weight: 300;
 }
@@ -61,16 +63,33 @@ body {
   color: #0C0C0C;
 }
 
-input
-{
-	border:0;
-	background:none;
+input {
+  border: 0;
+  margin: 0;
+  background: none;
   pointer-events: none;
-	font-size:13px;
-	font-family:Arial;
+  font-size: 13px;
+  font-family: Arial;
 }
 
-.loader{
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.top-fadein,
+.motto-single-fadein{
+  display: block;
+}
+
+/* LOADER */
+
+.loader {
   position: relative;
   position: absolute;
   top: 0;
@@ -81,51 +100,86 @@ input
   z-index: 1000;
 }
 
-.loader-content{
-  height: 180px;
+.loader-content {
+  height: 200px;
   position: absolute;
-  bottom: 50px;
-  left: 100px;
+  bottom: 15px;
+  left: 0px;
   overflow: hidden;
 }
 
 .dot,
-.counter{
+.counter {
   z-index: 1100;
   font-size: 182px;
   color: #FFFFFF;
   font-family: BonVoyage light;
-  transform: translateY(100%);
+  /* line-height: 120px; */
+  /* transform: translateY(100%); */
 }
 
-.counter{
+.counter {
   text-align: right;
-  width: 300px;
+  max-width: 300px;
+  height: 100%;
+   /* line-height: 28px; */
+}
+
+.dot {
+  display: inline-block;
+  height: 100%;
+}
+
+/* .loader-content {
+  height: 180px;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  overflow: hidden;
+}
+
+.dot,
+.counter {
+  z-index: 1100;
+  font-size: 182px;
+  color: #FFFFFF;
+  font-family: BonVoyage light;
+  line-height: 102px;
+  /* transform: translateY(100%); 
+} */
+
+.counter {
+  text-align: right;
+  max-width: 300px;
   height: 180px;
   line-height: 170px;
 }
 
-.dot{
+.dot {
   display: inline-block;
-}
+} 
+
+/* LOADER END */
 
 .main-container {
   font-family: BonVoyage regular;
   max-width: 1640px;
   position: relative;
   margin: 0 auto;
-  padding: 0 40px;
+  padding: 0 70px;
+
 }
 
 header {
   position: relative;
   height: 100vh;
-  min-height: 1000px;
+  min-height: 768px;
   max-height: 2000px;
 }
 
 
 .main-title {
+  font-family: BonVoyage light;
   position: absolute;
   top: 300px;
   left: 0;
@@ -134,23 +188,22 @@ header {
   line-height: 190px;
 }
 
-.title-overflow{
+.title-overflow {
   display: inline-block;
   overflow: hidden;
 }
 
-.title-content{
+.title-content {
   display: inline-block;
   transform: translateY(100%);
 }
 
-.main-title-small {
+/* .main-title-small {
   top: 0;
-  /* font-family: BonVoyage regular; */
   font-size: 27px;
   line-height: 29px;
   transition: top 1s;
-}
+} */
 
 .overlay {
   position: absolute;
@@ -171,7 +224,7 @@ header {
   font-weight: 300;
   position: absolute;
   color: #ffffff;
-  bottom: -126px;
+  bottom: -518px;
   left: 50%;
   transform: translateX(-50%);
 }
@@ -182,36 +235,25 @@ main {
 
 .motto1,
 .motto2 {
-  width: 65vw;
   max-width: 760px;
-  min-width: 280px;
+  position: relative;
 }
-
-
 
 .motto2 {
   margin: 166px 0 0 auto;
 }
 
-.motto-text {
-  max-width: 760px;
-  margin-right: 40px;
-}
 
 .motto1 p,
-.motto2 p{
+.motto2 p {
   overflow: hidden;
-}
-
-.motto1 span,
-.motto2 span{
-  display: block;
-  transform: translateY(100%);
 }
 
 .motto1 a,
 .motto2 a {
   display: block;
+  position: absolute;
+  right: 0px;
   min-width: 260px;
   color: #748a77;
   font-size: 18px;
@@ -219,44 +261,104 @@ main {
   margin-top: 30px;
   text-align: right;
   text-transform: uppercase;
+  pointer-events: none;
 }
 
 .best-of-header {
-  max-width: 848px;
-  margin-top: 169px;
+  max-width: 950px;
+  overflow: hidden;
+}
+
+.best-of-header:first-of-type {
+  margin-top: 229px;
 }
 
 .songs-list {
   display: flex;
   flex-wrap: wrap;
+  margin-top: 38px;
+}
+
+.song-flex-div {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  margin-top: 20px;
+}
+
+.song-play-1,
+.song-play-2,
+.song-play-3,
+.song-play-4,
+.song-play-5,
+.song-play-6 {
+  width: 35px;
+  height: 35px;
+  margin-right: 30px;
+}
+
+.song-gif-1,
+.song-gif-2,
+.song-gif-3,
+.song-gif-4,
+.song-gif-5,
+.song-gif-6 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 35px;
+  height: 35px;
+  z-index: -1;
+  opacity: 0;
 }
 
 .song {
   flex: 47%;
-  margin-top: 88px;
+  margin-top: 48px;
 }
 
 .song:nth-child(2n + 1) {
   padding-right: 50px;
 }
 
-.song p {
+
+.song-header {
   font-size: 18px;
   color: #748A77;
   text-transform: uppercase;
 }
 
-.song a {
-  font-family: BonVoyage regular;
-  font-size: 27px;
-  line-height: 36px;
-  color: #0F0F0F;
-  margin-top: 20px;
+.wrapper:first-child {
+  /* margin-top: 20px; */
 }
 
-.opera-image {
+.wrapper {
+  position: relative;
+
+  overflow: hidden;
+}
+
+.song a {
+  overflow: hidden;
+  display: block;
+  font-family: BonVoyage regular;
+  font-size: 25px;
+  line-height: 36px;
+  color: #0F0F0F;
+  pointer-events: none;
+
+}
+
+#opera-image {
   margin-top: 224px;
   width: 100%;
+}
+
+@media (max-width: 1280px) {
+  .song a {
+    font-size: 1.9vw;
+  }
+
 }
 
 @media (max-width: 1200px) {
@@ -265,24 +367,55 @@ main {
     line-height: 120px;
   }
 
+
+}
+
+@media (max-width: 1100px) {
+  
+  .dot,
+  .counter {
+    font-size: 142px;
+  }
+  
+  .counter {
+    text-align: right;
+    max-width: 250px;
+    height: 180px;
+    line-height: 170px;
+  }
+
   .best-of-header {
-    font-size: 102px;
-    line-height: 100.9%;
-    max-width: 640px;
+    font-size: 90px;
+    /* line-height: 100.9%; */
+  }
+
+  .songs-list {
+    flex-direction: column;
+  }
+
+  .song {
+    flex: 100%;
+  }
+
+  .song:nth-child(2n + 1) {
+    padding-right: 0;
+  }
+
+  .song a {
+    font-size: 27px;
   }
 }
 
 @media (max-width: 768px) {
 
+  h2 {
+    font-size: 64px;
+    line-height: 69px;
+  }
+
   p {
     font-size: 25px;
     line-height: 125.86%;
-  }
-
-  h2 {
-    font-family: Thryomanes;
-    font-size: 64px;
-    line-height: 69px;
   }
 
   .main-container {
@@ -303,7 +436,8 @@ main {
   }
 
   .overlay {
-    bottom: -269px;
+    bottom: 0;
+    top: 220px;
     width: 207px;
     height: 269px;
   }
@@ -312,13 +446,13 @@ main {
     bottom: -20px;
   }
 
+  .motto1,
+.motto2 {
+  max-width: 360px;
+}
+
   .motto2 {
     margin: 112px 0 0 auto;
-  }
-
-  .motto1 p,
-  .motto2 p {
-    margin-right: 10px;
   }
 
   .motto1 a,
@@ -326,26 +460,21 @@ main {
     min-width: 0;
   }
 
-  .best-of-header {
+  .best-of-header:first-child{
     margin-top: 130px;
-    font-size: 64px;
-    max-width: 440px;
   }
 
-  .songs-list {
-    flex-direction: column;
+  .best-of-header {
+    display: inline-block;
+    font-size: 62px;
   }
 
-  .song {
-    flex: 100%;
-  }
-
-  .song:nth-child(2n + 1) {
-    padding-right: 0;
+  .song{
+    margin-top: 60px;
   }
 
   .song a {
-    font-size: 24px;
+    font-size: 22px;
   }
 
   .opera-image {

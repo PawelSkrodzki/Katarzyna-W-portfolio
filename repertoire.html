@@ -14,19 +14,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/header-footer.css" />
     <link rel="stylesheet" href="css/repertoire.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/noframework.waypoints.min.js"></script>
 </head>
 
 <body>
     <div class="main-container">
         <header>
-            <span class="name"><a href="index.html"> Katarzyna Kaswen-Wilk</a></span>
+            <span class="name animated"><a href="index.html"> Katarzyna Kaswen-Wilk</a></span>
             <nav class="main-nav">
                 <ul>
-                    <li><a href="biography.html">Biography</a></li>
-                    <li><a href="repertoire.html">Repertoire</a></li>
-                    <li><a href="next-concerts.html">Next concerts</a></li>
-                    <li><a href="gallery.html">Gallery</a></li>
-                    <li><a href="contact.html">Contact</a></li>
+                    <li class="animated"><a href="biography.html">Biography</a></li>
+                    <li class="animated"><a href="repertoire.html">Repertoire</a></li>
+                    <li class="animated"><a href="next-concerts.html">Next concerts</a></li>
+                    <li class="animated"><a href="gallery.html">Gallery</a></li>
+                    <li class="animated"><a href="contact.html">Contact</a></li>
                 </ul>
             </nav>
             <nav class="responsive-nav">
@@ -45,10 +47,10 @@
 
             <div class="title-overlay"><h1 class="main-title-static">Repertoire</h1></div>
         </header>
-        <div class="accordion-menu">
+        <div id="lines-div" class="accordion-menu animated-text">
             <ul>
                 <span class="line"></span>
-                <li class="main-li"><a href="#" class="accordion">opera roles</a><span class="plus">&#10006;</span></li>
+                <li class="main-li"><a href="#" class="accordion top-fadein">opera roles</a><img class="plus" src="img/plus.svg" ></li>
                 <li class="open">
                     <ul class="open-list">
                         <li><a href="#">Cimarosa – Il matrimonio segreto – Carolina</a></li>
@@ -63,7 +65,7 @@
             </ul>
             <ul>
                 <span class="line"></span>
-                <li class="main-li"><a href="#" class="accordion">Separate airas</a><span>&#10006;</span></li>
+                <li class="main-li"><a href="#" class="accordion top-fadein">Separate airas</a><img class="plus" src="img/plus.svg" ></li>
                 <li class="open">
                     <ul class="open-list">
                         <li><a href="#">Cimarosa – Il matrimonio segreto – Carolina</a></li>
@@ -78,7 +80,7 @@
             </ul>
             <ul>
                 <span class="line"></span>
-                <li class="main-li"><a href="#" class="accordion">Oratorios and cantatas</a><span>&#10006;</span></li>
+                <li class="main-li"><a href="#" class="accordion top-fadein">Oratorios and cantatas</a><img class="plus" src="img/plus.svg" ></li>
                 <li class="open">
                     <ul class="open-list">
                         <li><a href="#">1</a></li>
@@ -89,7 +91,7 @@
             </ul>
             <ul>
                 <span class="line"></span>
-                <li class="main-li"><a href="#" class="accordion">Art song cycles</a><span>&#10006;</span></li>
+                <li class="main-li"><a href="#" class="accordion top-fadein">Art song cycles</a><img class="plus" src="img/plus.svg" ></li>
                 <li class="open">
                     <ul class="open-list">
                         <li><a href="#">1</a></li>
@@ -100,8 +102,8 @@
                 <span class="line"></span>
             </ul>
         </div>
-        <footer class="footer"><a href="next-concerts.html" class="next-chapter">Next chapter</a>
-            <h2 class="next-chapter-title"><a href="next-concerts.html">Next Concerts</a></h2>
+        <footer class="footer animated-text"><a href="next-concerts.html" class="next-chapter bottom-fadein">Next chapter</a>
+            <h2 class="next-chapter-title bottom-fadein"><a href="next-concerts.html">Next Concerts</a></h2>
             <div class="contact">
                 <p>kml.wilk@gmail.com</p>
                 <div class="contact-photo-container">
@@ -115,7 +117,8 @@
     </div>
     <script src="js/jquery-3.5.1.min.js"></script>
     <script src="js/anime.min.js"></script>
-    <script src="js/subpages-script.js" async defer></script>
+    <script src="js/header-script.js" async defer></script>
+    <script src="js/repertoire-script.js" async defer></script>
     <script src="js/repertoire-menu.js" async defer></script>
     <script src="js/menu-animation.js" async defer></script>
 </body>

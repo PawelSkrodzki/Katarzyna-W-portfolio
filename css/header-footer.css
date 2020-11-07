@@ -13,7 +13,7 @@
   font-family: ProximaNova;
 }
 
-body{
+body {
   overflow-x: hidden;
 }
 
@@ -34,13 +34,19 @@ body{
   font-family: ProximaNova;
   font-size: 17px;
   text-decoration: none;
+  transition: 0.5s;
 }
 
-.responsive-nav{
+.main-nav ul>li a:hover {
+  opacity: 0.7;
+  transition: 0.5s;
+}
+
+.responsive-nav {
   display: none;
 }
 
-.hamburger{
+.hamburger {
   box-sizing: content-box;
   position: absolute;
   right: -10px;
@@ -55,28 +61,28 @@ body{
   z-index: 200;
 }
 
-.hamburger.subpage-hamburger{
+.hamburger.subpage-hamburger {
   right: 10px;
 }
 
-.hamburger-fixed{
+.hamburger-fixed {
   position: fixed;
   right: 10px;
 }
 
-.hamburger span{
+.hamburger span {
   width: 30px;
-  height: 2px;
+  height: 1px;
   background-color: black;
   transition: 0.5s;
 }
 
-.bar1-opened{
+.bar1-opened {
   transform: rotateZ(-45deg) translate(-6px, 10px);
   transition: 0.5s;
 }
 
-.bar2-opened{
+.bar2-opened {
   transform: rotateZ(45deg) translate(5px, 0px);
   transition: 0.5s;
 }
@@ -84,9 +90,9 @@ body{
 .responsive-menu {
   z-index: 100;
   position: fixed;
-  right: -170px;
+  right: -100vw;
   top: 0px;
-  width: 170px;
+  width: 100vw;
   height: 100vh;
   padding-top: 99px;
   background-color: #fffdf4;
@@ -98,12 +104,14 @@ body{
   align-items: center;
 }
 
-.responsive-menu-open{
+.responsive-menu-open {
   right: 0;
   transition: 0.5s;
 }
 
-.responsive-menu li{
+.responsive-menu li {
+  transform: translateY(100%);
+  opacity: 0;
   margin-top: 10px;
   padding: 20px;
   font-size: 20px;
@@ -117,23 +125,23 @@ body{
   opacity: 0;
 }
 
-.name a{
+.name a {
   font-family: BonVoyage light;
 }
 
-.title-overlay{
+.title-overlay {
   overflow-y: hidden;
-  max-width: 1067px;
+  max-width: 1267px;
   min-height: 240px;
   margin: 168px 0 170px 0;
 }
 
-.title-overflow{
+.title-overflow {
   display: inline-block;
   overflow: hidden;
 }
 
-.title-content{
+.title-content {
   display: inline-block;
   transform: translateY(100%);
 }
@@ -155,12 +163,12 @@ body{
 }
 
 
-footer{
+footer {
   margin-top: 291px;
   margin-bottom: 20px;
 }
 
-footer a{
+footer a {
   font-family: BonVoyage regular;
 }
 
@@ -170,14 +178,22 @@ footer a{
   display: block;
 }
 
+.next-chapter:hover {
+  opacity: .7;
+}
+
 .next-chapter-title {
   font-weight: 300;
   text-align: center;
   margin-top: 54px;
 }
 
-.next-chapter-title a{
+.next-chapter-title a {
   font-family: BonVoyage light;
+}
+
+.next-chapter-title a:hover {
+  opacity: .4;
 }
 
 .contact {
@@ -194,41 +210,65 @@ footer a{
   justify-content: space-around;
 }
 
+.contact-photo-container img {
+  transition: .5s;
+}
+
+.contact-photo-container img:hover {
+  opacity: .6;
+  transition: .5s;
+}
+
 .footer p {
   font-family: ProximaNova;
   flex: 1;
   font-size: 16px;
+  transition: .5s;
+}
+
+.footer p:hover {
+  opacity: .6;
+  transition: .5s;
 }
 
 .contact p:last-child {
   text-align: right;
 }
 
-@media (max-width: 951px){
+@media (max-width: 1280px) {
 
   .main-nav {
-    padding-top: 76px;
-    margin: 0 0 0 auto;
-    max-width: 500px;
+    max-width: 430px;
   }
+
   .main-nav ul>li {
-    display: inline-block;
-    padding-left: 25px;
-    opacity: 0;
+    padding-left: 20px;
   }
+
+  .main-nav ul>li a {
+    font-size: 15px;
+  }
+
+  .main-title-static {
+    font-size: 142px;
+    line-height: 220px;
+  }
+}
+
+@media (max-width: 951px) {
 
   .title-overlay {
     margin: 0 0 100px 0;
     padding-top: 200px;
     min-height: auto;
-}
-
-  .main-title-static{
-    font-size: 18vw;
-    line-height: 26vw;
   }
 
-  .main-title-double{
+  .main-title-static {
+    font-size: 16vw;
+    line-height: 24vw;
+  }
+
+  .main-title-double {
     margin: 0 0 100px 0;
     padding-top: 200px;
     line-height: 18vw;
@@ -239,16 +279,16 @@ footer a{
 
 @media (max-width: 768px) {
 
-  .main-nav{
+  .main-nav {
     display: none;
   }
 
   .responsive-nav {
     display: block;
-    transition: opacity 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+    transition: opacity 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
   }
 
-  .main-title-static{
+  .main-title-static {
     font-size: 18vw;
     line-height: 26vw;
   }
@@ -261,7 +301,7 @@ footer a{
     flex-direction: column;
   }
 
-  .next-chapter-title{
+  .next-chapter-title {
     font-size: 59px;
   }
 

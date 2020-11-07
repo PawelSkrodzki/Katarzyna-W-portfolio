@@ -36,7 +36,7 @@ a {
 }
 
 body {
-    background-color: #EAE1DE;
+    background-color: #E7E3D8;
     color: #0C0C0C;
 }
 
@@ -44,8 +44,18 @@ body {
     max-width: 1640px;
     position: relative;
     margin: 0 auto;
-    padding: 0 40px;
+    padding: 0 70px;
 }
+
+/* Animation styles */
+
+  .animated-text,
+  .opera-image,
+  .single-bottom-fadein {
+    visibility: hidden;
+  }
+
+  /* end */
 
 main {
     display: flex;
@@ -81,6 +91,10 @@ main {
 .photo-container:nth-child(7) {
     width: 37vw;
     max-width: 449px;
+}
+
+.description{
+    margin: 26px 0 0 30px;
 }
 
 .right {

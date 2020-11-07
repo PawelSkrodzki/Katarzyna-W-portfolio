@@ -23,6 +23,7 @@ p {
     font-family: BonVoyage regular;
     font-size: 25px;
     line-height: 36px;
+    overflow: hidden;
 }
 
 h2 {
@@ -36,11 +37,6 @@ a {
     color: #0C0C0C;
 }
 
-span {
-    font-family: BonVoyage regular;
-    font-size: 20px;
-}
-
 body {
     background-color: #E8EAE6;
     ;
@@ -51,15 +47,23 @@ body {
     max-width: 1640px;
     position: relative;
     margin: 0 auto;
-    padding: 0 40px;
+    padding: 0 70px;
 }
+
+/* Animation styles */
+
+.animated-text {
+    visibility: hidden;
+}
+
+/* end */
 
 main {
     display: flex;
 }
 
-.award {
-    max-width: 640px;
+.text-wrapper p span {
+    display: block;
 }
 
 .media {
@@ -70,6 +74,7 @@ main {
 
 .media li {
     margin-bottom: 24px;
+    overflow: hidden;
 }
 
 .media li a {
@@ -78,6 +83,11 @@ main {
 
 .media li img {
     margin-right: 10px;
+}
+
+.media-text {
+    font-family: BonVoyage regular;
+    font-size: 20px;
 }
 
 @media (max-width: 768px) {
