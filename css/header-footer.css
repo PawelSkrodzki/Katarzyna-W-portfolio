@@ -20,24 +20,24 @@ body {
 .main-nav {
   padding-top: 76px;
   margin: 0 0 0 auto;
-  max-width: 570px;
+  max-width: 550px;
   white-space: nowrap;
 }
 
-.main-nav ul>li {
+.main-nav ul > li {
   display: inline-block;
   padding-left: 36px;
   opacity: 0;
 }
 
-.main-nav ul>li a {
+.main-nav ul > li a {
   font-family: ProximaNova;
-  font-size: 17px;
+  font-size: 16px;
   text-decoration: none;
   transition: 0.5s;
 }
 
-.main-nav ul>li a:hover {
+.main-nav ul > li a:hover {
   opacity: 0.7;
   transition: 0.5s;
 }
@@ -49,8 +49,8 @@ body {
 .hamburger {
   box-sizing: content-box;
   position: absolute;
-  right: -10px;
-  top: 50px;
+  right: 0px;
+  top: 73px;
   width: 30px;
   height: 10px;
   display: flex;
@@ -65,10 +65,11 @@ body {
   right: 10px;
 }
 
-.hamburger-fixed {
+/* .hamburger-fixed {
   position: fixed;
-  right: 10px;
-}
+  right: 0px;
+  top: 73px;
+} */
 
 .hamburger span {
   width: 30px;
@@ -90,9 +91,11 @@ body {
 .responsive-menu {
   z-index: 100;
   position: fixed;
-  right: -100vw;
+  /* right: -100vw; */
+  right: 0;
   top: 0px;
-  width: 100vw;
+  /* width: 100vw; */
+  width: 0;
   height: 100vh;
   padding-top: 99px;
   background-color: #fffdf4;
@@ -103,8 +106,13 @@ body {
 }
 
 .responsive-menu-open {
-  right: 0;
+  /* right: 0; */
+  width: 100vw;
   transition: 0.5s;
+}
+
+.hide-scrollbar {
+  overflow-y: hidden;
 }
 
 .responsive-menu li {
@@ -114,15 +122,15 @@ body {
   margin-left: 20px;
 }
 
-.responsive-menu li a{
-  font-size: 48px;
+.responsive-menu li a {
+  font-size: 42px;
   font-family: BonVoyage light;
 }
 
 .name {
   font-size: 27px;
   position: absolute;
-  top: 50px;
+  top: 75px;
   max-width: 203px;
   opacity: 0;
 }
@@ -135,7 +143,7 @@ body {
   overflow-y: hidden;
   max-width: 1267px;
   min-height: 240px;
-  margin: 168px 0 170px 0;
+  margin: 168px 0 148px 0;
 }
 
 .title-overflow {
@@ -151,19 +159,18 @@ body {
 .main-title-static {
   font-family: BonVoyage light;
   font-weight: normal;
-  font-size: 182px;
+  font-size: 184px;
   line-height: 220px;
   transform: translateY(100%);
 }
 
 .main-title-double {
   font-family: BonVoyage light;
-  margin: 168px 0 170px 0;
+  margin: 168px 0 148px 0;
   font-weight: normal;
-  font-size: 182px;
+  font-size: 184px;
   line-height: 170px;
 }
-
 
 footer {
   margin-top: 291px;
@@ -178,24 +185,19 @@ footer a {
   font-size: 20px;
   text-align: center;
   display: block;
-}
-
-.next-chapter:hover {
-  opacity: .7;
+  visibility: hidden;
 }
 
 .next-chapter-title {
   font-weight: 300;
   text-align: center;
+  font-size: 126px;
   margin-top: 54px;
+  visibility: hidden;
 }
 
 .next-chapter-title a {
   font-family: BonVoyage light;
-}
-
-.next-chapter-title a:hover {
-  opacity: .4;
 }
 
 .contact {
@@ -203,62 +205,87 @@ footer a {
   justify-content: space-between;
   align-items: center;
   margin-top: 253px;
-
 }
 
 .contact-photo-container {
   display: flex;
-  width: 100px;
+  width: 60px;
   justify-content: space-around;
 }
 
 .contact-photo-container img {
-  transition: .5s;
+  transition: 0.5s;
+  height: 14px;
 }
 
 .contact-photo-container img:hover {
-  opacity: .6;
-  transition: .5s;
+  opacity: 0.6;
+  transition: 0.5s;
 }
 
 .footer p {
   font-family: ProximaNova;
   flex: 1;
   font-size: 16px;
-  transition: .5s;
 }
 
-.footer p:hover {
-  opacity: .6;
-  transition: .5s;
+.footer p a {
+  transition: 0.5s;
+  font-family: ProximaNova;
+  font-size: 16px;
 }
 
 .contact p:last-child {
   text-align: right;
 }
 
+/* end */
+
+@media (max-width: 1440px) {
+  .name {
+    font-size: 24px;
+  }
+}
+
 @media (max-width: 1280px) {
+  .name {
+    font-size: 22px;
+    width: 180px;
+  }
 
   .main-nav {
     max-width: 430px;
   }
 
-  .main-nav ul>li {
+  .main-nav ul > li {
     padding-left: 20px;
   }
 
-  .main-nav ul>li a {
+  .main-nav ul > li a {
     font-size: 15px;
   }
 
+  .title-overlay {
+    margin: 140px 0 120px 0;
+  }
+
   .main-title-static {
-    font-size: 142px;
+    font-size: 168px;
     line-height: 220px;
   }
 }
 
-@media (max-width: 951px) {
+@media (max-width: 1024px) {
+  .main-container {
+    padding: 0 6%;
+  }
 
+  .next-chapter-title {
+    margin-top: 16px;
+  }
+}
+
+@media (max-width: 951px) {
   .title-overlay {
     margin: 0 0 100px 0;
     padding-top: 200px;
@@ -276,18 +303,16 @@ footer a {
     line-height: 18vw;
     font-size: 18vw;
   }
-
 }
 
 @media (max-width: 768px) {
-
   .main-nav {
     display: none;
   }
 
   .responsive-nav {
     display: block;
-    transition: opacity 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
+    transition: opacity 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
   }
 
   .main-title-static {
@@ -304,17 +329,16 @@ footer a {
   }
 
   .next-chapter-title {
-    font-size: 59px;
+    font-size: 96px;
   }
 
   .footer p:last-of-type {
-    margin: 6px 0 20px 0;
+    margin: 2px 0 20px 0;
   }
 
   .contact-photo-container {
-    width: 140px;
+    width: 80px;
     order: -1;
-    margin-bottom: 25px;
+    margin-bottom: 16px;
   }
-
 }

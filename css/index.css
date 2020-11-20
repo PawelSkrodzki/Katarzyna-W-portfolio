@@ -3,17 +3,16 @@
   font-family: BonVoyage regular;
 }
 
-
 @font-face {
   font-family: BonVoyage light;
-  src: url('fonts/made_bon_voyage_thin-webfont.woff2') format('woff2'),
-    url('fonts/made_bon_voyage_thin-webfont.woff') format('woff');
+  src: url("fonts/made_bon_voyage_thin-webfont.woff2") format("woff2"),
+    url("fonts/made_bon_voyage_thin-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
-  src: url(fonts/ProximaNova-Light.otf);
+  src: url(fonts/ProximaNova-Thin.otf);
   font-family: ProximaNova;
 }
 
@@ -26,7 +25,6 @@
     opacity: 1;
   }
 }
-
 
 * {
   margin: 0;
@@ -48,19 +46,19 @@ h1 {
 h2 {
   font-family: BonVoyage light;
   font-weight: 300;
-  font-size: 122px;
+  font-size: 126px;
   line-height: 105.9%;
 }
 
 a {
   font-family: BonVoyage regular;
   text-decoration: none;
-  color: #0C0C0C;
+  color: #0c0c0c;
 }
 
 body {
   background-color: #c7d3c9;
-  color: #0C0C0C;
+  color: #0c0c0c;
 }
 
 input {
@@ -78,13 +76,21 @@ input::-webkit-inner-spin-button {
   margin: 0;
 }
 
-input[type=number] {
+input[type="number"] {
   -moz-appearance: textfield;
 }
 
 .top-fadein,
-.motto-single-fadein{
+.motto-single-fadein {
   display: block;
+}
+
+.top-fadein,
+.bottom-fadein,
+.motto-single-fadein,
+.motto-bottom-fadein,
+.opera-image {
+  visibility: hidden;
 }
 
 /* LOADER */
@@ -112,7 +118,7 @@ input[type=number] {
 .counter {
   z-index: 1100;
   font-size: 182px;
-  color: #FFFFFF;
+  color: #ffffff;
   font-family: BonVoyage light;
   /* line-height: 120px; */
   /* transform: translateY(100%); */
@@ -122,7 +128,7 @@ input[type=number] {
   text-align: right;
   max-width: 300px;
   height: 100%;
-   /* line-height: 28px; */
+  /* line-height: 28px; */
 }
 
 .dot {
@@ -157,7 +163,7 @@ input[type=number] {
 
 .dot {
   display: inline-block;
-} 
+}
 
 /* LOADER END */
 
@@ -167,7 +173,6 @@ input[type=number] {
   position: relative;
   margin: 0 auto;
   padding: 0 70px;
-
 }
 
 header {
@@ -176,7 +181,6 @@ header {
   min-height: 768px;
   max-height: 2000px;
 }
-
 
 .main-title {
   font-family: BonVoyage light;
@@ -198,12 +202,12 @@ header {
   transform: translateY(100%);
 }
 
-/* .main-title-small {
-  top: 0;
+.main-title-small {
+  position: absolute;
+  top: 75px;
   font-size: 27px;
-  line-height: 29px;
-  transition: top 1s;
-} */
+  line-height: 27px;
+}
 
 .overlay {
   position: absolute;
@@ -230,19 +234,28 @@ header {
 }
 
 main {
-  padding-top: 236px;
+  padding-top: 180px;
+}
+
+.motto-container {
+  display: flex;
+  flex-direction: column;
 }
 
 .motto1,
 .motto2 {
-  max-width: 760px;
+  /* max-width: 760px; */
+  display: inline-block;
   position: relative;
 }
 
-.motto2 {
-  margin: 166px 0 0 auto;
+.motto1 {
+  margin: 0 auto 0 0;
 }
 
+.motto2 {
+  margin: 166px 40px 0 auto;
+}
 
 .motto1 p,
 .motto2 p {
@@ -253,12 +266,12 @@ main {
 .motto2 a {
   display: block;
   position: absolute;
-  right: 0px;
+  right: -40px;
   min-width: 260px;
   color: #748a77;
   font-size: 18px;
   line-height: 27px;
-  margin-top: 30px;
+  margin-top: 60px;
   text-align: right;
   text-transform: uppercase;
   pointer-events: none;
@@ -321,10 +334,9 @@ main {
   padding-right: 50px;
 }
 
-
 .song-header {
   font-size: 18px;
-  color: #748A77;
+  color: #748a77;
   text-transform: uppercase;
 }
 
@@ -334,7 +346,6 @@ main {
 
 .wrapper {
   position: relative;
-
   overflow: hidden;
 }
 
@@ -344,21 +355,56 @@ main {
   font-family: BonVoyage regular;
   font-size: 25px;
   line-height: 36px;
-  color: #0F0F0F;
+  color: #0f0f0f;
   pointer-events: none;
-
 }
 
-#opera-image {
+.opera-image {
   margin-top: 224px;
   width: 100%;
+  visibility: hidden;
+}
+
+@media (max-width: 1440px) {
+  .main-container {
+    padding: 0 10%;
+  }
+
+  .motto1,
+  .motto2 {
+    max-width: 700px;
+  }
+
+  .song a,
+  .motto-text p {
+    font-size: 22px;
+    line-height: 34px;
+  }
+
+  .song-play-1,
+  .song-play-2,
+  .song-play-3,
+  .song-play-4,
+  .song-play-5,
+  .song-play-6 {
+    margin-right: 18px;
+  }
 }
 
 @media (max-width: 1280px) {
-  .song a {
-    font-size: 1.9vw;
+  .main-title {
+    font-size: 172px;
+    line-height: 172px;
   }
+  .song a {
+    font-size: 1.8vw;
+  }
+}
 
+@media (max-width: 1280px) {
+  .main-container {
+    padding: 0 8%;
+  }
 }
 
 @media (max-width: 1200px) {
@@ -366,17 +412,20 @@ main {
     font-size: 120px;
     line-height: 120px;
   }
+}
 
-
+@media (max-width: 1024px) {
+  .main-container {
+    padding: 0 6%;
+  }
 }
 
 @media (max-width: 1100px) {
-  
   .dot,
   .counter {
     font-size: 142px;
   }
-  
+
   .counter {
     text-align: right;
     max-width: 250px;
@@ -407,7 +456,6 @@ main {
 }
 
 @media (max-width: 768px) {
-
   h2 {
     font-size: 64px;
     line-height: 69px;
@@ -419,7 +467,7 @@ main {
   }
 
   .main-container {
-    padding: 0 20px;
+    padding: 0 4%;
   }
 
   header {
@@ -436,20 +484,20 @@ main {
   }
 
   .overlay {
-    bottom: 0;
-    top: 220px;
+    /* bottom: 0;
+    top: 220px; */
     width: 207px;
     height: 269px;
   }
 
-  .overlay h2 {
+  /* .overlay h2 {
     bottom: -20px;
-  }
+  } */
 
   .motto1,
-.motto2 {
-  max-width: 360px;
-}
+  .motto2 {
+    max-width: 360px;
+  }
 
   .motto2 {
     margin: 112px 0 0 auto;
@@ -460,7 +508,7 @@ main {
     min-width: 0;
   }
 
-  .best-of-header:first-child{
+  .best-of-header:first-child {
     margin-top: 130px;
   }
 
@@ -469,7 +517,7 @@ main {
     font-size: 62px;
   }
 
-  .song{
+  .song {
     margin-top: 60px;
   }
 
@@ -484,5 +532,4 @@ main {
   .next-chapter {
     margin-top: 205px;
   }
-
 }
