@@ -56,34 +56,16 @@ $(window).on("beforeunload", function () {
 });
 
 $(document).ready(function () {
-  // const scroll = new Scrooth({
-  //   element: window,
-  //   strength: 10,
-  //   acceleration: 1,
-  //   deceleration: 0.975,
-  // });
-
-  // const actualScreenWidth = window.addEventListener("resize", () => {
-  //   window.innerWidth;
-  // });
-
-  // if (actualScreenWidth >= 768) {
-  //   fullAnimation();
-  // }
-  // animationWithoutLoader();
-
   $(".counter, .dot, .main-nav li, main-title span, .title-content").css("transform", "translateY(100%)");
   $(".main-nav li").css("transform", "translateY(-100%)");
 
-  const targetWidth = 768;
+  const targetWidth = 766;
   if ($(window).width() > targetWidth) {
     fullAnimation();
   } else {
     animationWithoutLoader();
   }
-  // disableScroll()
-
-  fullAnimation();
+  disableScroll();
 
   function fullAnimation() {
     let tl = anime.timeline({
@@ -94,15 +76,21 @@ $(document).ready(function () {
 
     tl.add({
       targets: ".counter",
-      translateY: "0%",
+      translateY: [100, 0],
       duration: 1000,
+      begin: function (target) {
+        document.querySelector(".counter").style.visibility = "visible";
+      },
     })
 
       .add(
         {
           targets: ".dot",
-          translateY: "0%",
+          translateY: [100, 0],
           duration: 1000,
+          begin: function (target) {
+            document.querySelector(".dot").style.visibility = "visible";
+          },
         },
         "-=800"
       )
@@ -223,37 +211,12 @@ $(document).ready(function () {
       },
       "+=500"
     )
-
-      .add(
-        {
-          targets: ".main-nav li",
-          translateY: 0,
-          opacity: 1,
-          delay: anime.stagger(300, {
-            from: "last",
-          }),
-          duration: 1500,
-        },
-        "-=2000"
-      )
-
-      // .add(
-      //   {
-      //     targets: ".main-title",
-      //     translateX: 250,
-      //     fontSize: 27,
-      //     lineHeight: 27,
-      //     duration: 1500,
-      //   },
-      //   "-=1000"
-      // )
-
       .add(
         {
           targets: ".overlay",
-          bottom: "15%",
+          bottom: "19%",
           easing: "easeOutCubic",
-          duration: 1500,
+          duration: 2000,
         },
         "-=1500"
       )
@@ -264,7 +227,14 @@ $(document).ready(function () {
           easing: "easeOutCubic",
           complete: function () {
             enableScroll();
-            fadeInAnimations();
+
+            const hiddenObjects = document.querySelectorAll(
+              ".top-fadein, .bottom-fadein, .motto-single-fadein, .motto-bottom-fadein, .opera-image"
+            );
+            const hiddenObjectsArray = Array.from(hiddenObjects);
+            hiddenObjectsArray.forEach((obj) => {
+              obj.style.visibility = "visible";
+            });
           },
         },
         "-=1300"

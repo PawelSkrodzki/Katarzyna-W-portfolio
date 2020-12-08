@@ -9,7 +9,7 @@
 }
 
 @font-face {
-  src: url(fonts/ProximaNova-Light.otf);
+  src: url(fonts/ProximaNova-Thin.otf);
   font-family: ProximaNova;
 }
 
@@ -18,6 +18,7 @@ body {
 }
 
 .main-nav {
+  display: block;
   padding-top: 76px;
   margin: 0 0 0 auto;
   max-width: 550px;
@@ -91,10 +92,8 @@ body {
 .responsive-menu {
   z-index: 100;
   position: fixed;
-  /* right: -100vw; */
   right: 0;
   top: 0px;
-  /* width: 100vw; */
   width: 0;
   height: 100vh;
   padding-top: 99px;
@@ -106,7 +105,6 @@ body {
 }
 
 .responsive-menu-open {
-  /* right: 0; */
   width: 100vw;
   transition: 0.5s;
 }
@@ -305,7 +303,7 @@ footer a {
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 766px) {
   .main-nav {
     display: none;
   }
@@ -315,6 +313,14 @@ footer a {
     transition: opacity 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
   }
 
+  .hamburger {
+    top: 40px;
+  }
+
+  .name {
+    top: 40px;
+  }
+
   .main-title-static {
     font-size: 18vw;
     line-height: 26vw;
@@ -322,18 +328,20 @@ footer a {
 
   footer {
     margin-top: 205px;
+    margin-bottom: 0px;
+  }
+
+  .next-chapter-title {
+    line-height: 60px;
+    font-size: 64px;
   }
 
   .contact {
     flex-direction: column;
   }
 
-  .next-chapter-title {
-    font-size: 96px;
-  }
-
   .footer p:last-of-type {
-    margin: 2px 0 20px 0;
+    margin: 2px 0 12px 0;
   }
 
   .contact-photo-container {

@@ -120,6 +120,7 @@ input[type="number"] {
   font-size: 182px;
   color: #ffffff;
   font-family: BonVoyage light;
+  visibility: hidden;
   /* line-height: 120px; */
   /* transform: translateY(100%); */
 }
@@ -135,24 +136,6 @@ input[type="number"] {
   display: inline-block;
   height: 100%;
 }
-
-/* .loader-content {
-  height: 180px;
-  position: absolute;
-  bottom: 0px;
-  left: 0px;
-  overflow: hidden;
-}
-
-.dot,
-.counter {
-  z-index: 1100;
-  font-size: 182px;
-  color: #FFFFFF;
-  font-family: BonVoyage light;
-  line-height: 102px;
-  /* transform: translateY(100%); 
-} */
 
 .counter {
   text-align: right;
@@ -216,7 +199,6 @@ header {
   bottom: -100%;
   width: 315px;
   height: 409px;
-  /*zmiana przy animacji*/
 }
 
 .overlay img {
@@ -244,7 +226,6 @@ main {
 
 .motto1,
 .motto2 {
-  /* max-width: 760px; */
   display: inline-block;
   position: relative;
 }
@@ -296,7 +277,7 @@ main {
   position: relative;
   display: flex;
   flex-direction: row;
-  margin-top: 20px;
+  margin-top: 12px;
 }
 
 .song-play-1,
@@ -338,10 +319,6 @@ main {
   font-size: 18px;
   color: #748a77;
   text-transform: uppercase;
-}
-
-.wrapper:first-child {
-  /* margin-top: 20px; */
 }
 
 .wrapper {
@@ -405,6 +382,14 @@ main {
   .main-container {
     padding: 0 8%;
   }
+
+  main {
+    padding-top: 100px;
+  }
+
+  .best-of-header:first-of-type {
+    margin-top: 240px;
+  }
 }
 
 @media (max-width: 1200px) {
@@ -433,6 +418,10 @@ main {
     line-height: 170px;
   }
 
+  .main-title {
+    white-space: nowrap;
+  }
+
   .best-of-header {
     font-size: 90px;
     /* line-height: 100.9%; */
@@ -455,7 +444,7 @@ main {
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 766px) {
   h2 {
     font-size: 64px;
     line-height: 69px;
@@ -474,9 +463,8 @@ main {
     min-height: 0;
   }
 
-  .main-title {
-    font-size: 15vw;
-    line-height: 13vw;
+  .main-title-small {
+    top: 40px;
   }
 
   main {
@@ -484,8 +472,6 @@ main {
   }
 
   .overlay {
-    /* bottom: 0;
-    top: 220px; */
     width: 207px;
     height: 269px;
   }
@@ -505,7 +491,10 @@ main {
 
   .motto1 a,
   .motto2 a {
+    right: 0px;
     min-width: 0;
+    color: #748a77;
+    margin-top: 30px;
   }
 
   .best-of-header:first-child {
@@ -514,7 +503,7 @@ main {
 
   .best-of-header {
     display: inline-block;
-    font-size: 62px;
+    font-size: 50px;
   }
 
   .song {

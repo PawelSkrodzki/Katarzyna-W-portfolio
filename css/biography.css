@@ -209,12 +209,25 @@ main {
     grid-template-columns: 1fr;
   }
 
+  .photo-description {
+    margin: 24px 0 0 0px;
+    text-align: center;
+  }
+
   .side-text-container {
     justify-self: center;
     text-align: center;
   }
 
+  .image-container-2 {
+    margin-top: 0px;
+  }
+
   .side-text-container img {
     margin-top: 100px;
+  }
+
+  .side-photo-description {
+    margin: 24px 0 0 0;
   }
 }

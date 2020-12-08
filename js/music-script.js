@@ -1,228 +1,80 @@
-
-const audio1 = $("#songs-demo-1")[0];
-
-$('.song-play-1').click(function () {
-  const clicks = $(this).data('clicks');
+const playMusic = (music, songGif1, songPlay1) => {
+  const clicks = $(this).data("clicks");
   if (clicks) {
-    audio1.pause();
-    audio1.currentTime = 0;
+    music.pause();
+    music.currentTime = 0;
     let tl = anime.timeline({
-      easing: 'easeInOutCubic',
-      duration: 500
-    })
+      easing: "easeInOutCubic",
+      duration: 500,
+    });
     tl.add({
-      targets: '.song-gif-1',
-      opacity: [1, 0]
-
-    })
-      .add({
-        targets: '.song-play-1',
-        opacity: [0, 1]
-      })
-  } else {
-    audio1.play()
-    let tl = anime.timeline({
-      easing: 'easeInOutCubic',
-      duration: 500
-    })
-    tl.add({
-      targets: '.song-play-1',
-      opacity: [1, 0]
-    })
-      .add({
-        targets: '.song-gif-1',
-        opacity: [0, 1]
-      })
-  }
-  $(this).data("clicks", !clicks);
-});
-
-const audio2 = $("#songs-demo-2")[0];
-
-$('.song-play-2').click(function () {
-  const clicks = $(this).data('clicks');
-  if (clicks) {
-    audio2.pause();
-    audio2.currentTime = 0;
-    let tl = anime.timeline({
-      easing: 'easeInOutCubic',
-      duration: 500
-    })
-    tl.add({
-      targets: '.song-gif-2',
-      opacity: [1, 0]
-
-    })
-      .add({
-        targets: '.song-play-2',
-        opacity: [0, 1]
-      })
-  } else {
-    audio2.play()
-    let tl = anime.timeline({
-      easing: 'easeInOutCubic',
-      duration: 500
-    })
-    tl.add({
-      targets: '.song-play-2',
+      targets: songGif1,
       opacity: [1, 0],
-    })
-      .add({
-        targets: '.song-gif-2',
-        opacity: [0, 1]
-      })
+    }).add({
+      targets: songPlay1,
+      opacity: [0, 1],
+    });
+  } else {
+    music.play();
+    let tl = anime.timeline({
+      easing: "easeInOutCubic",
+      duration: 500,
+    });
+    tl.add({
+      targets: songPlay1,
+      opacity: [1, 0],
+    }).add({
+      targets: songGif1,
+      opacity: [0, 1],
+    });
   }
   $(this).data("clicks", !clicks);
+};
+
+const audio1 = document.querySelector("#songs-demo-1");
+const songPlay1 = document.querySelector(".song-play-1");
+const songGif1 = document.querySelector(".song-gif-1");
+
+songPlay1.addEventListener("click", () => {
+  playMusic(audio1, songGif1, songPlay1);
 });
 
-const audio3 = $("#songs-demo-3")[0];
+const audio2 = document.querySelector("#songs-demo-2");
+const songPlay2 = document.querySelector(".song-play-2");
+const songGif2 = document.querySelector(".song-gif-2");
 
-$('.song-play-3').click(function () {
-  const clicks = $(this).data('clicks');
-  if (clicks) {
-    audio3.pause();
-    audio3.currentTime = 0;
-    let tl = anime.timeline({
-      easing: 'easeInOutCubic',
-      duration: 500
-    })
-    tl.add({
-      targets: '.song-gif-3',
-      opacity: [1, 0]
-
-    })
-      .add({
-        targets: '.song-play-3',
-        opacity: [0, 1]
-      })
-  } else {
-    audio3.play()
-    let tl = anime.timeline({
-      easing: 'easeInOutCubic',
-      duration: 500
-    })
-    tl.add({
-      targets: '.song-play-3',
-      opacity: [1, 0]
-    })
-      .add({
-        targets: '.song-gif-3',
-        opacity: [0, 1]
-      })
-  }
-  $(this).data("clicks", !clicks);
+songPlay2.addEventListener("click", () => {
+  playMusic(audio2, songGif2, songPlay2);
 });
 
-const audio4 = $("#songs-demo-4")[0];
+const audio3 = document.querySelector("#songs-demo-3");
+const songPlay3 = document.querySelector(".song-play-3");
+const songGif3 = document.querySelector(".song-gif-3");
 
-$('.song-play-4').click(function () {
-  const clicks = $(this).data('clicks');
-  if (clicks) {
-    audio4.pause();
-    audio4.currentTime = 0;
-    let tl = anime.timeline({
-      easing: 'easeInOutCubic',
-      duration: 500
-    })
-    tl.add({
-      targets: '.song-gif-4',
-      opacity: [1, 0]
-
-    })
-      .add({
-        targets: '.song-play-4',
-        opacity: [0, 1]
-      })
-  } else {
-    audio4.play()
-    let tl = anime.timeline({
-      easing: 'easeInOutCubic',
-      duration: 500
-    })
-    tl.add({
-      targets: '.song-play-4',
-      opacity: [1, 0]
-    })
-      .add({
-        targets: '.song-gif-4',
-        opacity: [0, 1]
-      })
-  }
-  $(this).data("clicks", !clicks);
+songPlay3.addEventListener("click", () => {
+  playMusic(audio3, songGif3, songPlay3);
 });
 
-const audio5 = $("#songs-demo-5")[0];
+const audio4 = document.querySelector("#songs-demo-4");
+const songPlay4 = document.querySelector(".song-play-4");
+const songGif4 = document.querySelector(".song-gif-4");
 
-$('.song-play-5').click(function () {
-  const clicks = $(this).data('clicks');
-  if (clicks) {
-    audio5.pause();
-    audio5.currentTime = 0;
-    let tl = anime.timeline({
-      easing: 'easeInOutCubic',
-      duration: 500
-    })
-    tl.add({
-      targets: '.song-gif-5',
-      opacity: [1, 0]
-
-    })
-      .add({
-        targets: '.song-play-5',
-        opacity: [0, 1]
-      })
-  } else {
-    audio5.play()
-    let tl = anime.timeline({
-      easing: 'easeInOutCubic',
-      duration: 500
-    })
-    tl.add({
-      targets: '.song-play-5',
-      opacity: [1, 0]
-    })
-      .add({
-        targets: '.song-gif-5',
-        opacity: [0, 1]
-      })
-  }
-  $(this).data("clicks", !clicks);
+songPlay4.addEventListener("click", () => {
+  playMusic(audio4, songGif4, songPlay4);
 });
 
-const audio6 = $("#songs-demo-6")[0];
+const audio5 = document.querySelector("#songs-demo-5");
+const songPlay5 = document.querySelector(".song-play-5");
+const songGif5 = document.querySelector(".song-gif-5");
 
-$('.song-play-6').click(function () {
-  const clicks = $(this).data('clicks');
-  if (clicks) {
-    audio6.pause();
-    audio6.currentTime = 0;
-    let tl = anime.timeline({
-      easing: 'easeInOutCubic',
-      duration: 500
-    })
-    tl.add({
-      targets: '.song-gif-6',
-      opacity: [1, 0]
+songPlay5.addEventListener("click", () => {
+  playMusic(audio5, songGif5, songPlay5);
+});
 
-    })
-      .add({
-        targets: '.song-play-6',
-        opacity: [0, 1]
-      })
-  } else {
-    audio6.play()
-    let tl = anime.timeline({
-      easing: 'easeInOutCubic',
-      duration: 500
-    })
-    tl.add({
-      targets: '.song-play-6',
-      opacity: [1, 0]
-    })
-      .add({
-        targets: '.song-gif-6',
-        opacity: [0, 1]
-      })
-  }
-  $(this).data("clicks", !clicks);
+const audio6 = document.querySelector("#songs-demo-6");
+const songPlay6 = document.querySelector(".song-play-6");
+const songGif6 = document.querySelector(".song-gif-6");
+
+songPlay6.addEventListener("click", () => {
+  playMusic(audio6, songGif6, songPlay6);
 });
