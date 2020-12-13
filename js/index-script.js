@@ -193,7 +193,6 @@ $(document).ready(function () {
   function animationWithoutLoader() {
     $(".loader").hide();
     $(".main-title-js").removeClass("main-title").addClass("main-title-small");
-    $(".main-title");
 
     let tl = anime.timeline({
       easing: "easeInOutCubic",
@@ -232,8 +231,16 @@ $(document).ready(function () {
               ".top-fadein, .bottom-fadein, .motto-single-fadein, .motto-bottom-fadein, .opera-image"
             );
             const hiddenObjectsArray = Array.from(hiddenObjects);
+
+            const hiddenNavElements = document.querySelectorAll(".main-nav ul li");
+            hiddenNavElementsArray = Array.from(hiddenNavElements);
+
             hiddenObjectsArray.forEach((obj) => {
               obj.style.visibility = "visible";
+            });
+            hiddenNavElementsArray.forEach((obj) => {
+              obj.style.opacity = 1;
+              obj.style.transform = "translateY(0)";
             });
           },
         },
