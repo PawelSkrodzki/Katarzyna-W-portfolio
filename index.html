@@ -12,8 +12,9 @@
   <title></title>
   <meta name="description" content="" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="stylesheet" href="css/index.css" />
+
   <link rel="stylesheet" href="css/header-footer.css" />
+  <link rel="stylesheet" href="css/index.css" />
 
   <link rel="icon" type="image/svg" href="img/Favicon.svg" />
 
@@ -32,33 +33,39 @@
   </div>
   <div class="main-container">
     <header>
-      <nav class="main-nav">
-        <ul>
-          <li><a href="biography.html">Biography</a></li>
-          <li><a href="repertoire.html">Repertoire</a></li>
-          <li><a href="next-concerts.html">Next concerts</a></li>
-          <li><a href="gallery.html">Gallery</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </nav>
-      <nav class="responsive-nav">
-        <div class="hamburger">
-          <span class="bar1"></span>
-          <span class="bar2"></span>
-        </div>
-        <ul class="responsive-menu">
-          <li><a href="biography.html">Biography</a></li>
-          <li><a href="repertoire.html">Repertoire</a></li>
-          <li><a href="next-concerts.html">Next concerts</a></li>
-          <li><a href="gallery.html">Gallery</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </nav>
+      <div class="header-flex-container">
+        <h1 class="main-title main-title-js">
+          <span class="title-overflow"><span class="title-content">Katarzyna</span></span> <br />
+          <span class="title-overflow"><span class="title-content">Kaswen-Wilk</span></span>
+        </h1>
+        <nav class="main-nav">
+          <ul>
+            <li><a href="biography.html">Biography</a></li>
+            <li><a href="repertoire.html">Repertoire</a></li>
+            <li><a href="next-concerts.html">Next concerts</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+        <nav class="responsive-nav">
+          <div class="hamburger">
+            <span class="bar1"></span>
+            <span class="bar2"></span>
+          </div>
+          <ul class="responsive-menu">
+            <li><a href="biography.html">Biography</a></li>
+            <li><a href="repertoire.html">Repertoire</a></li>
+            <li><a href="next-concerts.html">Next concerts</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
 
-      <h1 class="main-title main-title-js">
-        <span class="title-overflow"><span class="title-content">Katarzyna</span></span> <br />
-        <span class="title-overflow"><span class="title-content">Kaswen-Wilk</span></span>
-      </h1>
+        <!-- <h1 class="main-title main-title-js">
+          <span class="title-overflow"><span class="title-content">Katarzyna</span></span> <br />
+          <span class="title-overflow"><span class="title-content">Kaswen-Wilk</span></span>
+        </h1> -->
+      </div>
       <div class="overlay">
         <img src="img/Group.png" alt="" />
         <h2>Soprano</h2>
@@ -112,7 +119,7 @@
           <div class="song-flex-div">
             <img class="song-gif-1" src="img/sound.gif" />
             <img class="song-play-1 bottom-fadein" src="img/play.svg" />
-            <div id="song-hover-1">
+            <div id="song-title-1" class="song-hover">
               <p class="wrapper"><a href="#" class="bottom-fadein">W. A. Mozart - Deh vieni, non tardar -</a></p>
               <p class="wrapper"><a href="#" class="bottom-fadein">nozze di Figaro</a></p>
             </div>
@@ -123,7 +130,7 @@
           <div class="song-flex-div">
             <img class="song-gif-2" src="img/sound.gif" />
             <img class="song-play-2 bottom-fadein" src="img/play.svg" />
-            <div id="song-hover-2">
+            <div id="song-title-2" class="song-hover">
               <p class="wrapper"><a href="#" class="bottom-fadein">J. S. Bach - Bereitet Die Wege - BWV 132</a></p>
             </div>
           </div>
@@ -133,7 +140,7 @@
           <div class="song-flex-div">
             <img class="song-gif-3" src="img/sound.gif" />
             <img class="song-play-3 bottom-fadein" src="img/play.svg" />
-            <div id="song-hover-3">
+            <div id="song-title-3" class="song-hover">
               <p class="wrapper"><a href="#" class="bottom-fadein">B. Britten - Fish In The Unruffled Lakes</a></p>
             </div>
           </div>
@@ -143,7 +150,7 @@
           <div class="song-flex-div">
             <img class="song-gif-4" src="img/sound.gif" />
             <img class="song-play-4 bottom-fadein" src="img/play.svg" />
-            <div id="song-hover-4">
+            <div id="song-title-4" class="song-hover">
               <p class="wrapper"><a href="#" class="bottom-fadein">G. Donizetti - Prendi - L'elisir d'amore</a></p>
             </div>
           </div>
@@ -153,7 +160,7 @@
           <div class="song-flex-div">
             <img class="song-gif-5" src="img/sound.gif" />
             <img class="song-play-5 bottom-fadein" src="img/play.svg" />
-            <div id="song-hover-5">
+            <div id="song-title-5" class="song-hover">
               <p class="wrapper"><a href="#" class="bottom-fadein">J. S. Bach - Höchster - BWV 51</a></p>
             </div>
           </div>
@@ -163,7 +170,7 @@
           <div class="song-flex-div">
             <img class="song-gif-6" src="img/sound.gif" />
             <img class="song-play-6 bottom-fadein" src="img/play.svg" />
-            <div id="song-hover-6">
+            <div id="song-title-6" class="song-hover">
               <p class="wrapper"><a href="#" class="bottom-fadein">G. F. Handel - Rejoice Greatly - Messiah</a></p>
             </div>
           </div>
@@ -191,7 +198,7 @@
       <img class="opera-image" src="img/opera.png" alt="opera" />
     </main>
     <footer class="footer">
-      <a href="biography.html" class="next-chapter bottom-fadein">Next chapter</a>
+      <span class="next-chapter bottom-fadein"><a href="biography.html">Next chapter</a></span>
       <h2 class="next-chapter-title bottom-fadein"><a href="biography.html">Biography</a></h2>
       <div class="contact">
         <p>kml.wilk@gmail.com</p>

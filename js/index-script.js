@@ -78,7 +78,7 @@ $(document).ready(function () {
       targets: ".counter",
       translateY: [100, 0],
       duration: 1000,
-      begin: function (target) {
+      begin: function () {
         document.querySelector(".counter").style.visibility = "visible";
       },
     })
@@ -88,7 +88,7 @@ $(document).ready(function () {
           targets: ".dot",
           translateY: [100, 0],
           duration: 1000,
-          begin: function (target) {
+          begin: function () {
             document.querySelector(".dot").style.visibility = "visible";
           },
         },
@@ -140,7 +140,6 @@ $(document).ready(function () {
         },
         "-=1000"
       )
-
       .add(
         {
           targets: ".main-nav li",
@@ -157,11 +156,10 @@ $(document).ready(function () {
       .add(
         {
           targets: ".main-title",
-          translateX: 250,
           fontSize: 24,
           lineHeight: 26,
-          left: -240,
-          top: 80,
+          left: 0,
+          top: 0,
           duration: 2500,
         },
         "-=1000"
@@ -232,7 +230,7 @@ $(document).ready(function () {
             );
             const hiddenObjectsArray = Array.from(hiddenObjects);
 
-            const hiddenNavElements = document.querySelectorAll(".main-nav ul li");
+            const hiddenNavElements = document.querySelectorAll(".main-nav li");
             hiddenNavElementsArray = Array.from(hiddenNavElements);
 
             hiddenObjectsArray.forEach((obj) => {

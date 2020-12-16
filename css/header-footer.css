@@ -66,12 +66,6 @@ body {
   right: 10px;
 }
 
-/* .hamburger-fixed {
-  position: fixed;
-  right: 0px;
-  top: 73px;
-} */
-
 .hamburger span {
   width: 30px;
   height: 1px;
@@ -96,17 +90,17 @@ body {
   top: 0px;
   width: 0;
   height: 100vh;
-  padding-top: 99px;
+  padding-top: 90px;
   background-color: #fffdf4;
-  transition: 0.5s;
   list-style-type: none;
   display: flex;
   flex-direction: column;
+  white-space: nowrap;
+  /* transition: width 0.5s; */
 }
 
 .responsive-menu-open {
   width: 100vw;
-  transition: 0.5s;
 }
 
 .hide-scrollbar {
@@ -116,7 +110,7 @@ body {
 .responsive-menu li {
   transform: translateY(100%);
   opacity: 0;
-  margin-bottom: 24px;
+  margin-bottom: 22px;
   margin-left: 20px;
 }
 
@@ -180,10 +174,15 @@ footer a {
 }
 
 .next-chapter {
+  font-size: BonVoyage light;
   font-size: 20px;
   text-align: center;
   display: block;
   visibility: hidden;
+}
+
+.next-chapter a {
+  transition: opacity 0.5s;
 }
 
 .next-chapter-title {
@@ -196,6 +195,12 @@ footer a {
 
 .next-chapter-title a {
   font-family: BonVoyage light;
+  transition: 0.5s;
+}
+
+.next-chapter a:hover,
+.next-chapter-title a:hover {
+  opacity: 0.6;
 }
 
 .contact {
