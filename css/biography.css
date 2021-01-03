@@ -192,6 +192,10 @@ main {
   .main-container {
     padding: 0 8%;
   }
+
+  .photo-description {
+    margin: 24px 0 0 25px;
+  }
 }
 
 @media (max-width: 1024px) {

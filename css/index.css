@@ -121,15 +121,12 @@ input[type="number"] {
   color: #ffffff;
   font-family: BonVoyage light;
   visibility: hidden;
-  /* line-height: 120px; */
-  /* transform: translateY(100%); */
 }
 
 .counter {
   text-align: right;
   max-width: 300px;
   height: 100%;
-  /* line-height: 28px; */
 }
 
 .dot {
@@ -161,7 +158,7 @@ input[type="number"] {
 header {
   position: relative;
   height: 100vh;
-  min-height: 768px;
+  min-height: 668px;
   max-height: 2000px;
 }
 
@@ -175,11 +172,11 @@ header {
 .main-title {
   font-family: BonVoyage light;
   position: absolute;
-  top: 300px;
+  top: 200px;
   left: 0;
   font-weight: normal;
-  font-size: 182px;
-  line-height: 190px;
+  font-size: 162px;
+  line-height: 170px;
 }
 
 .main-nav {
@@ -400,16 +397,6 @@ main {
 }
 
 @media (max-width: 1280px) {
-  .main-title {
-    font-size: 172px;
-    line-height: 172px;
-  }
-  .song a {
-    font-size: 1.8vw;
-  }
-}
-
-@media (max-width: 1280px) {
   .main-container {
     padding: 0 8%;
   }
@@ -418,15 +405,24 @@ main {
     padding-top: 100px;
   }
 
+  .main-title {
+    font-size: 152px;
+    line-height: 152px;
+  }
+
   .best-of-header:first-of-type {
     margin-top: 240px;
+  }
+
+  .song a {
+    font-size: 1.8vw;
   }
 }
 
 @media (max-width: 1200px) {
   .main-title {
-    font-size: 120px;
-    line-height: 120px;
+    font-size: 100px;
+    line-height: 100px;
   }
 }
 

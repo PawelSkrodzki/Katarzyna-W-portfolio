@@ -1,3 +1,8 @@
+$(window).on("beforeunload", function () {
+  $("body").hide();
+  $(window).scrollTop(0);
+});
+
 var keys = {
   37: 1,
   38: 1,
@@ -49,11 +54,6 @@ function enableScroll() {
   window.removeEventListener("touchmove", preventDefault, wheelOpt);
   window.removeEventListener("keydown", preventDefaultForScrollKeys, false);
 }
-
-$(window).on("beforeunload", function () {
-  $("body").hide();
-  $(window).scrollTop(0);
-});
 
 $(document).ready(function () {
   $(".counter, .dot, .main-nav li, main-title span, .title-content").css("transform", "translateY(100%)");
@@ -168,7 +168,7 @@ $(document).ready(function () {
       .add(
         {
           targets: ".overlay",
-          bottom: "15%",
+          bottom: "20%",
           easing: "easeOutCubic",
           duration: 1500,
         },
@@ -211,7 +211,7 @@ $(document).ready(function () {
       .add(
         {
           targets: ".overlay",
-          bottom: "19%",
+          bottom: "24%",
           easing: "easeOutCubic",
           duration: 2000,
         },
