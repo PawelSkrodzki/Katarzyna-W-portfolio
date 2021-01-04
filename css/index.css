@@ -169,16 +169,6 @@ header {
   position: relative;
 }
 
-.main-title {
-  font-family: BonVoyage light;
-  position: absolute;
-  top: 200px;
-  left: 0;
-  font-weight: normal;
-  font-size: 162px;
-  line-height: 170px;
-}
-
 .main-nav {
   align-items: flex-start;
   display: block;
@@ -195,21 +185,36 @@ header {
   top: 0px;
 }
 
-.title-overflow {
-  display: inline-block;
-  overflow: hidden;
-}
-
-.title-content {
-  display: inline-block;
-  transform: translateY(100%);
-}
-
-.main-title-small {
+.main-title {
+  display: block;
+  font-family: BonVoyage light;
   position: absolute;
-  top: 5px;
-  font-size: 27px;
-  line-height: 27px;
+  top: 200px;
+  left: 0;
+  font-weight: normal;
+}
+
+.title-overflow {
+  overflow: hidden;
+  height: 160px;
+  margin-bottom: 40px;
+}
+
+.title-overflow-mobile {
+  overflow: hidden;
+  height: 22px;
+  margin-bottom: 10px;
+}
+
+.title-overflow:first-of-type,
+.title-overflow-mobile:first-of-type {
+  margin-top: 7px;
+}
+
+.title-content-img {
+  height: 100%;
+  width: auto;
+  transform: translateY(-100%);
 }
 
 .overlay {
@@ -405,10 +410,10 @@ main {
     padding-top: 100px;
   }
 
-  .main-title {
-    font-size: 152px;
-    line-height: 152px;
-  }
+  /* .title-overflow {
+  height: 152px;
+  margin-bottom: 40px;
+} */
 
   .best-of-header:first-of-type {
     margin-top: 240px;
@@ -420,9 +425,15 @@ main {
 }
 
 @media (max-width: 1200px) {
-  .main-title {
-    font-size: 100px;
-    line-height: 100px;
+  .title-overflow {
+    height: 100px;
+    margin-bottom: 20px;
+  }
+
+  .title-content-img {
+    display: inline-block;
+    height: 100%;
+    transform: translateY(-100%);
   }
 }
 
@@ -443,10 +454,6 @@ main {
     max-width: 250px;
     height: 180px;
     line-height: 170px;
-  }
-
-  .main-title {
-    white-space: nowrap;
   }
 
   .best-of-header {
@@ -501,6 +508,11 @@ main {
 
   .header-flex-container {
     margin-top: 40px;
+  }
+
+  .title-overflow {
+    height: 22px;
+    margin-bottom: 10px;
   }
 
   main {

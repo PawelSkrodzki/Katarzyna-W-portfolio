@@ -56,7 +56,7 @@ function enableScroll() {
 }
 
 $(document).ready(function () {
-  $(".counter, .dot, .main-nav li, main-title span, .title-content").css("transform", "translateY(100%)");
+  $(".counter, .dot, .main-nav li, .title-content-img").css("transform", "translateY(100%)");
   $(".main-nav li").css("transform", "translateY(-100%)");
 
   const targetWidth = 766;
@@ -131,7 +131,7 @@ $(document).ready(function () {
       })
       .add(
         {
-          targets: ".title-content",
+          targets: ".title-content-img",
           translateY: 0,
           opacity: 1,
           easing: "easeOutCubic",
@@ -156,11 +156,18 @@ $(document).ready(function () {
       .add(
         {
           targets: ".main-title",
-          fontSize: 24,
-          lineHeight: 26,
           left: 0,
           top: 0,
           duration: 2500,
+          begin: () => {
+            anime({
+              targets: ".title-overflow",
+              height: 22,
+              marginBottom: 10,
+              duration: 2500,
+              easing: "easeInOutCubic",
+            });
+          },
         },
         "-=1000"
       )
@@ -190,7 +197,8 @@ $(document).ready(function () {
 
   function animationWithoutLoader() {
     $(".loader").hide();
-    $(".main-title-js").removeClass("main-title").addClass("main-title-small");
+    $(".title-overflow-js").removeClass("title-overflow").addClass("title-overflow-mobile");
+    $(".main-title").css("top", "0");
 
     let tl = anime.timeline({
       easing: "easeInOutCubic",
@@ -199,7 +207,7 @@ $(document).ready(function () {
     });
     tl.add(
       {
-        targets: ".title-content",
+        targets: ".title-content-img",
         translateY: 0,
         opacity: 1,
         easing: "easeOutCubic",

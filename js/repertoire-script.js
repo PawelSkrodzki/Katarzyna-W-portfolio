@@ -1,11 +1,4 @@
 $(document).ready(function () {
-  // const scroll = new Scrooth({
-  //   element: window,
-  //   strength: 10,
-  //   acceleration: 2,
-  //   deceleration: 0.975,
-  // });
-
   const targetWidth = 766;
   if ($(window).width() > targetWidth) {
     const continuousElements = document.getElementsByClassName("animated-text");
@@ -116,7 +109,7 @@ $(document).ready(function () {
 
   function repertoireMenuAnim() {
     $.easing.def = "easeOutBounce";
-    $("li.main-li a").click(function (e) {
+    $(".accordion").click(function (e) {
       const dropDown = $(this).parent().next();
       dropDown.slideToggle("slow");
       $(this).parent().find("img").toggleClass("close-style");

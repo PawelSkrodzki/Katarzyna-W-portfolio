@@ -101,7 +101,7 @@ li {
   position: relative;
 }
 
-.main-li a {
+.accordion {
   font-family: BonVoyage regular;
   text-transform: uppercase;
   display: block;
@@ -110,6 +110,7 @@ li {
   width: 100%;
   height: 100%;
   color: #ffffff;
+  cursor: pointer;
 }
 
 .plus {
@@ -141,7 +142,7 @@ li {
   transition: 0.5s;
 }
 
-.open-list li a {
+.open-list li span {
   font-family: ProximaNova;
 }
 
