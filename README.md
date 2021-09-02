@@ -7,4 +7,4 @@
     <li>jQuery</li>
     <li>Waypoints</li>
  </ul>
-<p>Check results <a href="https://pawelskrodzki.github.io/Pawel-Skrodzki-portfolio/" target="_blank">here</a>
+<p>Check results <a href="https://pawelskrodzki.github.io/Katarzyna-W-portfolio/" target="_blank">here</a>
